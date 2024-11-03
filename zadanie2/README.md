@@ -26,7 +26,7 @@
 <br>
 
 > ## Solution
-1. ###Przykładowa Tabela Decyzyjna: Zasady Wypożyczeń w Bibliotece
+### 1.Przykładowa Tabela Decyzyjna: Zasady Wypożyczeń w Bibliotece
 
 W tej tabeli oceniamy, czy użytkownik może wypożyczyć książkę na podstawie poniższych atrybutów:
 
@@ -49,7 +49,7 @@ W tej tabeli oceniamy, czy użytkownik może wypożyczyć książkę na podstawi
 
 <br>
 
-2. ###Zestaw Minimalnych Reguł
+### 2.Zestaw Minimalnych Reguł
 
 Na podstawie tabeli decyzyjnej, opracowano następujące minimalne reguły:
 
