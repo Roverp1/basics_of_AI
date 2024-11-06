@@ -7,7 +7,7 @@
 | E-mail                          | 121546@student.san.edu.pl / yar.zubaha@proton.me |
 | Nr albumu                       | 121546       |
 | Data                            | 03.11.2024   |
-| Wersja                          | 1.0          |
+| Wersja                          | 1.2          |
 
 <br>
 
@@ -26,7 +26,7 @@
 <br>
 
 > ## Solution
-### 1.Przykładowa Tabela Decyzyjna: Zasady Wypożyczeń w Bibliotece
+### 1. Przykładowa Tabela Decyzyjna: Zasady Wypożyczeń w Bibliotece
 
 W tej tabeli oceniamy, czy użytkownik może wypożyczyć książkę na podstawie poniższych atrybutów:
 
@@ -49,7 +49,7 @@ W tej tabeli oceniamy, czy użytkownik może wypożyczyć książkę na podstawi
 
 <br>
 
-### 2.Zestaw Minimalnych Reguł
+### 2. Zestaw Minimalnych Reguł
 
 Na podstawie tabeli decyzyjnej, opracowano następujące minimalne reguły:
 
@@ -65,14 +65,44 @@ Na podstawie tabeli decyzyjnej, opracowano następujące minimalne reguły:
 
 > ## Przebieg obliczeń
 
-### Krok 1: Identyfikacja niespójności
+### Krok 1: Macierz Nierozróżnialności
 
-W tej tabeli brak jest identycznych wierszy z różnymi decyzjami, dlatego nie występują żadne niespójności, które wymagałyby rozwiązania.
+Macierz nierozróżnialności pokazuje pary obiektów o identycznych wartościach atrybutów, które różnią się wyłącznie atrybutem decyzyjnym.
 
-### Krok 2: Eliminacja powtarzających się obiektów
+|       | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+|-------|---|---|---|---|---|---|---|---|
+| **1** | Ø |   |   |   |   |   |   |   |
+| **2** |   | Ø |   |   |   |   |   |   |
+| **3** |   |   | Ø |   |   |   |   |   |
+| **4** |   |   |   | Ø |   |   |   |   |
+| **5** |   |   |   |   | Ø |   |   |   |
+| **6** |   |   |   |   |   | Ø |   |   |
+| **7** |   |   |   |   |   |   | Ø |   |
+| **8** |   |   |   |   |   |   |   | Ø |
 
-Ponieważ nie ma powtarzających się wierszy, można przejść bezpośrednio do tworzenia minimalnych reguł.
 
-### Krok 3: Utworzenie zestawu reguł minimalnych
+### Krok 2: Macierz Rozróżnialności
 
-Na podstawie warunków w tabeli decyzyjnej opracowano minimalny zestaw reguł, który zawiera wszystkie możliwe przypadki decyzyjne zdefiniowane w tabeli. 
+Macierz rozróżnialności pokazuje różnice między obiektami, co pozwala zidentyfikować minimalne reguły. Każda litera oznacza atrybut, który różni się między parami obiektów:
+
+|       | 1   | 2   | 3     | 4    | 5   | 6    | 7    | 8    |
+|-------|-----|-----|-------|------|-----|------|------|------|
+| **1** | Ø   | K   | TS    | TS   | S   | T    | W    | TS   |
+| **2** | K   | Ø   | TS    | TS   | KS  | T    | WS   | TS   |
+| **3** | TS  | TS  | Ø     | W    | T   | W    | TSW  | W    |
+| **4** | TS  | TS  | W     | Ø    | TS  | T    | WS   | TS   |
+| **5** | S   | KS  | T     | TS   | Ø   | TS   | W    | TS   |
+| **6** | T   | T   | W     | T    | TS  | Ø    | TSW  | W    |
+| **7** | W   | WS  | TSW   | WS   | W   | TSW  | Ø    | TS   |
+| **8** | TS  | TS  | W     | TS   | TS  | W    | TS   | Ø    |
+
+W macierzy tej:
+- `T` oznacza `Typ użytkownika`
+- `S` oznacza `Status książki`
+- `K` oznacza `Książki zaległe`
+- `W` oznacza `Ważność członkostwa`
+
+### Krok 3: Utworzenie Zestawu Reguł Minimalnych
+
+Na podstawie macierzy rozróżnialności oraz nierozróżnialności wyznaczono minimalne reguły, które opisano powyżej.
+
