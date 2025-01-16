@@ -48,7 +48,7 @@ W ramach zadania, użyto algorytmu A* do znalezienia najkrótszej ścieżki w gr
    - Detale komórek zawierające koszty `f_cost`, `g_cost`, `h_cost` oraz wskaźnik na rodzica.
 
 2. **Funkcja Heurystyczna:**
-   - Odległość euklidesowa: \( h = \sqrt{(x_{dest} - x)^2 + (y_{dest} - y)^2} \).
+   - Odległość euklidesowa: h = sqrt((x_dest - x)^2 + (y_dest - y)^2).
 
 3. **Algorytm:**
    - Początek od komórki startowej (`[8, 0]`) z kosztami zainicjalizowanymi jako 0.
@@ -60,15 +60,17 @@ W ramach zadania, użyto algorytmu A* do znalezienia najkrótszej ścieżki w gr
 
 4. **Wynik:**
    - Najkrótsza ścieżka wyznaczona i wyświetlona jako sekwencja współrzędnych.
+   ![121546_PSI_zadanie5_output.png](./pics/121546_PSI_zadanie5_output.png) 
 
 ### Wyniki
 - Siatka (9x10) zapewnia minimalne wymaganie grafu z 10 węzłami.
 - Algorytm skutecznie oblicza najkrótszą ścieżkę.
 - Przykładowy wynik:
-  ```
-  The Path is:
-  -> (8, 0) -> (7, 0) -> (6, 0) -> (5, 0) -> (4, 0) -> (3, 0) -> (2, 0) -> (1, 0) -> (0, 0)
-  ```
+    ```
+    Destination cell found!
+    The Path is:
+    -> (8, 0) -> (7, 0) -> (6, 0) -> (5, 0) -> (4, 1) -> (3, 2) -> (2, 1) -> (1, 0) -> (0, 0) 
+    ```
 
 ### Wyjaśnienie Wyników
 - **Koszty:**
