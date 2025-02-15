@@ -39,21 +39,27 @@ W tej tabeli oceniamy trzy opcje latarki na podstawie poniższych kryteriów:
 
 **Siła światła (lm):**
 
-- `μLM(x) = 0` dla `x <= 400`
-- `μLM(x) = (x - 400) / 100` dla `400 < x <= 500`
-- `μLM(x) = 1` dla `x > 500`
+Obliczenia dla każdego obiektu:
+
+- x1: \((420 - 400) / 100 = 0.2\)
+- x2: \((450 - 400) / 100 = 0.5\)
+- x3: \((430 - 400) / 100 = 0.3\)
 
 **Masa (kg):**
 
-- `μW(x) = 1` dla `x <= 0.2`
-- `μW(x) = (-x + 0.3) / 0.1` dla `0.2 < x <= 0.3`
-- `μW(x) = 0` dla `x > 0.3`
+Obliczenia dla każdego obiektu:
+
+- x1: \((0.3 - 0.22) / 0.1 = 0.8\)
+- x2: \((0.3 - 0.29) / 0.1 = 0.1\)
+- x3: \((0.3 - 0.25) / 0.1 = 0.5\)
 
 **Koszt (zł):**
 
-- `μC(x) = 1` dla `x <= 200`
-- `μC(x) = (-x + 300) / 100` dla `200 < x <= 300`
-- `μC(x) = 0` dla `x > 300`
+Obliczenia dla każdego obiektu:
+
+- x1: \((300 - 255) / 100 = 0.5\)
+- x2: \((300 - 290) / 100 = 0.1\)
+- x3: \((300 - 240) / 100 = 0.6\)
 
 ### 3. Obliczone Wartości Przynależności
 
